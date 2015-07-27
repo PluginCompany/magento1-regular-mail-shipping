@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Plugincompany_Regularmail>
+            <version>1.0.1</version>
+        </Plugincompany_Regularmail>
+    </modules>
+    <global>
+        <helpers>
+            <regularmail>
+                <class>Plugincompany_Regularmail_Helper</class>
+            </regularmail>
+        </helpers>
+        <models>
+            <regularmail>
+                <class>Plugincompany_Regularmail_Model</class>
+                <resourceModel>regularmail_mysql4</resourceModel>
+            </regularmail>
+        </models>
+        <blocks>
+            <regularmail>
+                <class>Plugincompany_Regularmail_Block</class>
+            </regularmail>
+        </blocks>
+        <resources>
+            <regularmail_setup>
+                <setup>
+                    <module>Plugincompany_Regularmail</module>
+                    <class>Mage_Catalog_Model_Resource_Eav_Mysql4_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </regularmail_setup>
+            <regularmail_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </regularmail_write>
+            <retularmail_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </retularmail_read>
+        </resources>
+    </global>
+    <default>
+        <carriers>
+            <regularmail>
+                <active>1</active>
+                <model>regularmail/carrier_regularmail</model>
+                <name>Envelope Shipping</name>
+                <title>Regular Mail</title>
+                <price>2.95</price>
+                <additional_price>1.00</additional_price>
+                <units_per_envelope>100</units_per_envelope>
+                <default_units>1</default_units>
+                <product_enabled>0</product_enabled>
+                <specificerrmsg>This shipping method is currently unavailable. If you would like to ship using this shipping method, please contact us.</specificerrmsg>
+                <sort_order>0</sort_order>
+                <unit_title>envelope units</unit_title>
+            </regularmail>
+        </carriers>
+    </default>
+</config> 
